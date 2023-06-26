@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* coopcycle
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-11 20:04+0000\n"
+"PO-Revision-Date: 2023-06-11 20:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coopcycle
+#: model:ir.model,name:coopcycle.model_res_partner
+msgid "A Coopcycle and Stripe ready Partner"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model,name:coopcycle.model_coopcycle_order
+msgid "A Coopcycle order"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model,name:coopcycle.model_coopcycle_vendor
+msgid "A Coopcycle vendor"
+msgstr ""
+
+#. module: coopcycle
+#: model_terms:ir.ui.view,arch_db:coopcycle.coopcycle_order_view_tree
+#: model_terms:ir.ui.view,arch_db:coopcycle.coopcycle_vendor_view_tree
+msgid "Channel"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.ui.menu,name:coopcycle.menu_0_coopcycle_data
+msgid "Coopcycle"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__res_partner_id
+msgid "Corresponding ResPartner ID"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__create_uid
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__create_date
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.ui.menu,name:coopcycle.menu_1_coopcycle_data
+msgid "Data"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__deliveryPriceWitoutTaxes
+msgid "Delivery paid by customer"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__display_name
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__deliveryFeesWitoutTaxes
+msgid "Fees paid by restaurant"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__id
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__id
+msgid "ID"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__takeaway
+msgid "Is takeaway"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__itemsTotal
+msgid "Items total"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order____last_update
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__write_uid
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__write_date
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__name
+msgid "Name"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__number
+msgid "Order number"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__state
+msgid "Order state"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__total
+msgid "Order total"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.actions.act_window,name:coopcycle.coopcycle_order_action
+#: model:ir.ui.menu,name:coopcycle.menu_2_coopcycle_order
+msgid "Orders"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__stripe_account_id
+#: model:ir.model.fields,field_description:coopcycle.field_res_partner__stripe_account_id
+#: model:ir.model.fields,field_description:coopcycle.field_res_users__stripe_account_id
+msgid "Stripe account ID"
+msgstr "Stripe account ID"
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_order__tipWitoutTaxes
+msgid "Tip given by customer"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.actions.act_window,name:coopcycle.coopcycle_vendor_action
+#: model:ir.ui.menu,name:coopcycle.menu_2_coopcycle_vendor
+msgid "Vendors"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__address
+msgid "address"
+msgstr ""
+
+#. module: coopcycle
+#: model:ir.model.fields,help:coopcycle.field_res_partner__stripe_account_id
+#: model:ir.model.fields,help:coopcycle.field_res_users__stripe_account_id
+msgid "coucou"
+msgstr "coucou"
+
+#. module: coopcycle
+#: model:ir.model.fields,field_description:coopcycle.field_coopcycle_vendor__phone
+msgid "phone"
+msgstr ""

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_coopcycle_order_query" model="ir.ui.view">
+        <field name="name">Coopcycle order query</field>
+        <field name="model">coopcycle.order.query</field>
+        <field name="arch" type="xml">
+            <form string="Choose your dates">
+                <group>
+                    <field name="begin"/>
+                </group><group>
+                    <field name="end"/>
+                </group>
+                <footer>
+                    <button name="open_for_dates" string="Confirm" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

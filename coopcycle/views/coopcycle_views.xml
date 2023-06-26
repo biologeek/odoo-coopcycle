@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id="coopcycle_order_view_tree" model="ir.ui.view">
+            <field name="name">CC</field>
+            <field name="model">coopcycle.order</field>
+            <field name="arch" type="xml">
+                <tree string="Channel">
+                    <field name="number" />
+                    <field name="total" />
+                    <field name="takeaway" />
+                </tree>
+            </field>
+        </record> -->
+        <record id="coopcycle_order_action" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">coopcycle.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="coopcycle_order_tree_view" model="ir.ui.view">
+            <field name="name">coopcycle.order.tree</field>
+            <field name="model">coopcycle.order</field>
+            <field name="arch" type="xml">
+                <tree js_class="coopcycle_orders_report_list">
+                        <field name="number" />
+                        <field name="itemsTotal" />
+                        <field name="total" />
+                        <field name="odoo_status" />
+                </tree>
+            </field>
+        </record>
+        <record id="view_imported_orders" model="ir.ui.view">
+            <field name="name">coopcycle.order.imported.tree</field>
+            <field name="model">coopcycle.order</field>
+            <field name="arch" type="xml">
+                <tree>
+                        <field name="number" />
+                        <field name="itemsTotal" />
+                        <field name="total" />
+                        <field name="odoo_status" />
+                </tree>
+            </field>
+        </record>
+         <!-- <record id="coopcycle_order_tree_view_inherit" model="ir.ui.view">
+            <field name="name">coopcycle.order.tree</field>
+            <field name="model">coopcycle.order</field>
+            <field name="inherit_id" ref="coopcycle_order_tree_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="before">
+                    <attribute name="js_class">button_in_tree</attribute>
+                </xpath>
+            </field>
+
+        </record> -->
+        <record id="coopcycle_order_form_view" model="ir.ui.view">
+            <field name="name">coopcycle.order.form</field>
+            <field name="model">coopcycle.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="number" />
+                        <field name="itemsTotal" />
+                        <field name="total" />
+                        <field name="odoo_status" />
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- VENDORS -->
+
+        <record id="coopcycle_vendor_view_tree" model="ir.ui.view">
+            <field name="name">Vendors</field>
+            <field name="model">coopcycle.vendor</field>
+            <field name="arch" type="xml">
+
+                <tree string="Channel">
+                    <field name="id" />
+                    <field name="name" />
+                    <field name="address" />
+                </tree>
+            </field>
+        </record>
+        <record id="coopcycle_vendor_action" model="ir.actions.act_window">
+            <field name="name">Vendors</field>
+            <field name="res_model">coopcycle.vendor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- <record model="ir.actions.server" id="update_coopcycle_vendor_list">
+            <field name="name">Update vendor list</field>
+            <field name="model_id" ref="model_account_account" />
+            <field name="binding_model_id" ref="account.model_account_account" />
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = model.action_retrieve_coopcycle_vendors_list()
+            </field>
+        </record> -->
+
+    </data>
+</odoo>

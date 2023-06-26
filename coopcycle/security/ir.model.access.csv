@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_coopcycle_order,access_coopcycle_order,model_coopcycle_order,base.group_user,1,1,1,1
+access_coopcycle_order_query,access_coopcycle_order_query,model_coopcycle_order_query,base.group_user,1,1,1,1
+access_coopcycle_vendor,access_coopcycle_vendor,model_coopcycle_vendor,base.group_user,1,1,1,1

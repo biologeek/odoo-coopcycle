@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem name="Coopcycle" id="menu_0_coopcycle_data">
+        <menuitem name="Data" id="menu_1_coopcycle_data">
+            <menuitem id="menu_2_coopcycle_order" name="Orders" action="coopcycle_order_action" sequence="1"/>
+            <menuitem id="menu_2_coopcycle_vendor" name="Vendors" action="coopcycle_vendor_action" sequence="2"/>            
+        </menuitem>
+    </menuitem>
+</odoo>
