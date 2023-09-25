@@ -23,23 +23,13 @@ class CoopcycleOrderQuery(models.TransientModel):
 
     def open_for_dates(self):
 
-        _logger.info(self.env.ref('coopcycle.view_imported_orders').id)
-        tree_view_id = self.env.ref('coopcycle.view_imported_orders').id
+        tree_view_id = self.env.ref('coopcycle.coopcycle_order_tree_view').id
         form_view_id = self.env.ref('coopcycle.coopcycle_order_form_view').id
         
         for date in [self.begin+timedelta(days=x) for x in range((self.end-self.begin).days)] :
 
-            response = self.env['coopcycle.order']._coopcycle_order_make_request("orders", {date: date})['hydra:member']
-            for order in response : 
-                self.env['coopcycle.order'].create({
-                    'number': order['number'],
-                    'total': order['total'],
-                    'takeaway': order['takeaway'],
-                    'itemsTotal': order['itemsTotal'],
-                    'deliveryPriceWithoutTaxes': order['adjustments']['delivery']['amount']/100/1.2,
-                    'tipWitoutTaxes': order['tip']['amount']/100/1.2 if order['tip'] else 0.0,
-                    'state': order['state'],
-                })
+            self.env['coopcycle.order']._coopcycle_order_import_request("orders", {'date': date.strftime("%Y-%m-%d")})
+           
 
         
         return {

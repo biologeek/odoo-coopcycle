@@ -22,26 +22,30 @@
             <field name="model">coopcycle.order</field>
             <field name="arch" type="xml">
                 <tree js_class="coopcycle_orders_report_list">
-                        <field name="number" />
-                        <field name="itemsTotal" />
-                        <field name="total" />
-                        <field name="odoo_status" />
+                    <field name="vendor" />
+                    <field name="number" />
+                    <field name="delivery_expected_at" />
+                    <field name="delivery_address" />
+                    <field name="items_total" />
+                    <field name="total" />
+                    <field name="odoo_status" />
                 </tree>
             </field>
         </record>
-        <record id="view_imported_orders" model="ir.ui.view">
+        <!-- <record id="view_imported_orders" model="ir.ui.view">
             <field name="name">coopcycle.order.imported.tree</field>
             <field name="model">coopcycle.order</field>
+            <field name="inherit_id">coopcycle_order_tree_view</field>
             <field name="arch" type="xml">
                 <tree>
                         <field name="number" />
-                        <field name="itemsTotal" />
+                        <field name="items_total" />
                         <field name="total" />
                         <field name="odoo_status" />
                 </tree>
             </field>
-        </record>
-         <!-- <record id="coopcycle_order_tree_view_inherit" model="ir.ui.view">
+        </record> -->
+        <!-- <record id="coopcycle_order_tree_view_inherit" model="ir.ui.view">
             <field name="name">coopcycle.order.tree</field>
             <field name="model">coopcycle.order</field>
             <field name="inherit_id" ref="coopcycle_order_tree_view" />
@@ -57,11 +61,46 @@
             <field name="model">coopcycle.order</field>
             <field name="arch" type="xml">
                 <form>
+                    <div class="row">
+                        <div class="col-6">
+                            <group>
+                                <field name="number" />
+                                <field name="odoo_status" />
+                                <field name="takeaway" />
+                                <field name="state" />
+                            </group>
+                        </div>
+                        <div class="col-6">
+                            <group>
+                                <field name="created_at" />
+                                <field name="pickup_expected_at" />
+                                <field name="delivery_expected_at" />
+                                <field name="delivery_done_at" />
+                            </group>
+                        </div>
+                    </div>
                     <group>
-                        <field name="number" />
-                        <field name="itemsTotal" />
+                        <field name="items_total" />
                         <field name="total" />
-                        <field name="odoo_status" />
+                    </group>
+                    <group>
+                        <field name="vendor" />
+                    </group>
+                    <group>
+                        <field name="customer" />
+                        <field name="delivery_address" />
+                    </group>
+                    <group>
+                        <label for="lines"></label>
+                        <br />
+                        <field name="lines">
+                            <tree>
+                                <field name="product" />
+                                <field name="unit_price" />
+                                <field name="quantity" />
+                                <field name="total" />
+                            </tree>
+                        </field>
                     </group>
                 </form>
             </field>
@@ -75,8 +114,8 @@
 
                 <tree string="Channel">
                     <field name="id" />
+                    <field name="external_id" />
                     <field name="name" />
-                    <field name="address" />
                 </tree>
             </field>
         </record>
@@ -85,7 +124,24 @@
             <field name="res_model">coopcycle.vendor</field>
             <field name="view_mode">tree,form</field>
         </record>
-        
+        <record id="coopcycle_customer_action" model="ir.actions.act_window">
+            <field name="name">Customers</field>
+            <field name="res_model">coopcycle.customer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="coopcycle_customer_view_tree" model="ir.ui.view">
+            <field name="name">Customers</field>
+            <field name="model">coopcycle.customer</field>
+            <field name="arch" type="xml">
+
+                <tree string="Channel">
+                    <field name="full_name" />
+                    <field name="phone" />
+                    <field name="order_count" />
+                </tree>
+            </field>
+        </record>
         <!-- <record model="ir.actions.server" id="update_coopcycle_vendor_list">
             <field name="name">Update vendor list</field>
             <field name="model_id" ref="model_account_account" />

@@ -5,6 +5,7 @@
         <menuitem name="Data" id="menu_1_coopcycle_data">
             <menuitem id="menu_2_coopcycle_order" name="Orders" action="coopcycle_order_action" sequence="1"/>
             <menuitem id="menu_2_coopcycle_vendor" name="Vendors" action="coopcycle_vendor_action" sequence="2"/>            
+            <menuitem id="menu_2_coopcycle_customer" name="Customers" action="coopcycle_customer_action" sequence="2"/>            
         </menuitem>
     </menuitem>
 </odoo>
